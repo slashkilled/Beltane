@@ -19,57 +19,58 @@ body {
   height: 100vh;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 60px;
+  align-items: flex-start;
+  padding: 80px 60px;
 }
 
 /* text */
 .text {
-  max-width: 520px;
+  max-width: 600px;
 }
 
 h1 {
-  font-size: 30px;
-  margin-bottom: 20px;
+  font-size: 52px;
+  margin-bottom: 25px;
 }
 
 p {
-  font-size: 14px;
+  font-size: 18px;
   color: #aaa;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   line-height: 1.6;
 }
 
 /* images */
 .images {
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 
 .images img {
-  width: 260px;
-  height: 360px;
+  width: 280px;
+  height: 380px;
   object-fit: cover;
   opacity: 0.85;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
-/* arrows */
-.arrow {
+/* start button */
+.start-btn {
   position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 26px;
-  color: #777;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 28px;
+  border: 1px solid #888;
+  color: #eaeaea;
   text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
-.arrow:hover {
+.start-btn:hover {
+  border-color: #fff;
   color: #fff;
-}
-
-.right {
-  right: 25px;
 }
 </style>
 </head>
@@ -79,32 +80,28 @@ p {
 <div class="slide">
 
   <div class="text">
-    <h1>Hello</h1>
+    <h1>&lt;Hello World&gt;</h1>
 
     <p>
-    Today I will tell you about a traditional event from the United Kingdom called Beltane. 
-    It is an old festival connected with nature, fire, and the changing of seasons.
+    Today I will tell you about a traditional event from the United Kingdom called Beltane.
+    It is an ancient festival connected with nature, fire, and the changing of seasons.
     </p>
 
     <p>
-    This celebration has deep historical roots and was important for ancient Celtic people. 
-    Even today, some communities still celebrate it in modern ways.
-    </p>
-
-    <p>
-    In this presentation, you will learn about its history, traditions, and how it is celebrated now.
+    This celebration has a long history and was important for Celtic people.
+    Today, it is still celebrated in different ways.
     </p>
   </div>
 
   <div class="images">
-    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
-    <img src="https://images.unsplash.com/photo-1473187983305-f615310e7daa">
+    <img src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
   </div>
 
 </div>
 
-<!-- navigation -->
-<a href="slide2.html" class="arrow right">→</a>
+<!-- START BUTTON -->
+<a href="slide1.html" class="start-btn">start</a>
 
 </body>
 </html>
