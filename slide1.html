@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Beltane — History</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-
 <style>
 body {
   margin: 0;
@@ -14,102 +13,135 @@ body {
   font-family: 'Roboto Mono', monospace;
 }
 
-/* layout */
-.slide {
-  height: 100vh;
+/* layout: two columns */
+.container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 60px;
+  min-height: 100vh;
+  flex-wrap: wrap;
 }
 
-/* text */
+/* text side */
 .text {
-  max-width: 520px;
+  flex: 1 1 50%;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-h1 {
-  font-size: 30px;
+.text h1 {
+  font-size: 50px;
   margin-bottom: 20px;
 }
 
-p {
-  font-size: 14px;
-  color: #aaa;
-  margin-bottom: 15px;
+.text p {
+  font-size: 18px;
   line-height: 1.6;
+  margin-bottom: 15px;
+  color: #ccc;
 }
 
-/* images */
+/* image side */
 .images {
-  display: flex;
-  gap: 20px;
+  flex: 1 1 50%;
+  position: relative;
+  padding: 40px;
 }
 
-.images img {
-  width: 260px;
-  height: 360px;
-  object-fit: cover;
-  opacity: 0.85;
-  border-radius: 4px;
+.images img.top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45%;
+  border-radius: 6px;
 }
 
-/* arrows */
-.arrow {
-  position: fixed;
+.images img.bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 45%;
+  border-radius: 6px;
+  opacity: 0.9;
+}
+
+/* navigation arrow */
+.arrow-right {
+  position: absolute;
   top: 50%;
+  right: 10%;
   transform: translateY(-50%);
-  font-size: 26px;
-  color: #777;
+  font-size: 50px;
+  color: #888;
   text-decoration: none;
+  transition: 0.3s;
 }
 
-.arrow:hover {
+.arrow-right:hover {
   color: #fff;
 }
 
-.left {
-  left: 25px;
-}
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 
-.right {
-  right: 25px;
+  .text {
+    padding: 40px 20px;
+  }
+
+  .text h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .text p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .images {
+    min-height: 300px;
+    padding: 20px;
+  }
+
+  .images img.top-left,
+  .images img.bottom-right {
+    position: relative;
+    width: 80%;
+    margin: 0 auto 20px auto;
+  }
+
+  .arrow-right {
+    font-size: 40px;
+    right: 45%;
+    top: auto;
+    margin-top: 20px;
+    transform: none;
+    display: block;
+    text-align: center;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<div class="slide">
-
+<div class="container">
   <div class="text">
     <h1>History of Beltane</h1>
-
-    <p>
-    Beltane is an ancient Celtic festival that marks the beginning of summer. 
-    It was traditionally celebrated on the night of April 30 and the day of May 1.
-    </p>
-
-    <p>
-    The festival comes from Ireland and Scotland and was one of the most important events of the year. 
-    People believed it was a time when the natural world became more active and full of life.
-    </p>
-
-    <p>
-    Fire was the main symbol of Beltane. Large bonfires were lit to protect people, animals, and crops from harm.
-    </p>
+    <p>Beltane is an ancient Celtic festival that marks the beginning of summer. It was traditionally celebrated on the night of April 30 and the day of May 1.</p>
+    <p>The festival comes from Ireland and Scotland and was one of the most important events of the Celtic year. People believed it was a time when the natural world became more active and full of life.</p>
+    <p>Fire was the main symbol of Beltane. Large bonfires were lit to protect people, animals, and crops from harm.</p>
   </div>
 
   <div class="images">
-    <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070305">
-    <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf">
+    <img src="https://www.beltane.org/wp-content/uploads/2019/04/BeltaneFireFestival1.jpg" class="top-left" alt="Beltane Fire 1">
+    <img src="https://www.bbc.com/news/av/pictures-c1eg571dqy2o" class="bottom-right" alt="Beltane Fire 2">
+    <a href="slide2.html" class="arrow-right">→</a>
   </div>
-
 </div>
-
-<!-- navigation -->
-<a href="index.html" class="arrow left">←</a>
-<a href="slide2.html" class="arrow right">→</a>
 
 </body>
 </html>
