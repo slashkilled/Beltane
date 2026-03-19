@@ -53,10 +53,10 @@ body {
   border-radius:6px;
 }
 .images-section img.qr {
-  width:100px;
-  height:100px;
-  margin-top:10px;
-  border-radius:4px;
+  width:180px;
+  height:180px;
+  margin-top:20px;
+  border-radius:6px;
 }
 .start-btn {
   display:inline-block;
@@ -74,7 +74,7 @@ body {
   .text-section h1 { font-size:50px; }
   .text-section p { font-size:16px; }
   .images-section img.main { max-width:90%; }
-  .images-section img.qr { display:none; } /* Скрываем QR на телефоне */
+  .images-section img.qr { display:none; } /* скрыть на телефоне */
   .start-btn { padding:20px 50px; font-size:24px; }
 }
 </style>
@@ -91,9 +91,8 @@ body {
 
   <div class="images-section">
     <img class="main" src="https://ichef.bbci.co.uk/news/800/cpsprodpb/B6C3/production/_124378764_hi075677381.jpg.webp" alt="Beltane Fire 1">
-    <img class="main" src="https://ichef.bbci.co.uk/news/800/cpsprodpb/F7FF/production/_124378436_hi075677163.jpg.webp" alt="Beltane Fire 2">
-    <!-- Компактный QR код -->
-    <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://slashkilled.github.io/Beltane/" alt="QR Code to Beltane site">
+    <!-- Средний QR-код вместо второй фотографии -->
+    <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://slashkilled.github.io/Beltane/" alt="QR Code to Beltane site">
   </div>
 </div>
 </body>
