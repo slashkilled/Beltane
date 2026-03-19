@@ -3,11 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Beltane Presentation</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-
 <style>
 body {
   margin: 0;
@@ -20,40 +17,39 @@ body {
 .slide {
   min-height: 100vh;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 80px 60px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 80px 40px;
+  text-align: center;
 }
 
 /* text */
-.text {
-  max-width: 600px;
-}
-
-h1 {
-  font-size: 52px;
+.text h1 {
+  font-size: 60px;
   margin-bottom: 25px;
 }
 
-p {
+.text p {
   font-size: 18px;
   color: #aaa;
   margin-bottom: 18px;
   line-height: 1.6;
+  max-width: 700px;
 }
 
 /* images */
 .images {
   display: flex;
-  gap: 40px;
+  gap: 50px;
+  margin-top: 50px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .images img {
-  width: 280px;
-  height: 380px;
+  width: 300px;
+  height: 400px;
   object-fit: cover;
   opacity: 0.85;
   border-radius: 6px;
@@ -61,15 +57,12 @@ p {
 
 /* start button */
 .start-btn {
-  position: fixed;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 12px 28px;
-  border: 1px solid #888;
+  margin-top: 80px;
+  padding: 20px 60px;
+  font-size: 24px;
+  border: 2px solid #888;
   color: #eaeaea;
   text-decoration: none;
-  font-size: 16px;
   transition: 0.3s;
 }
 
@@ -78,28 +71,14 @@ p {
   color: #fff;
 }
 
-/* Responsive styles */
+/* Responsive */
 @media (max-width: 768px) {
-  .slide {
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
+  .text h1 {
+    font-size: 48px;
   }
 
-  h1 {
-    font-size: 40px;
-    text-align: center;
-  }
-
-  p {
+  .text p {
     font-size: 16px;
-    text-align: center;
-  }
-
-  .images {
-    gap: 20px;
-    justify-content: center;
-    margin-top: 30px;
   }
 
   .images img {
@@ -109,41 +88,29 @@ p {
   }
 
   .start-btn {
-    bottom: 40px;
-    padding: 10px 24px;
-    font-size: 15px;
+    padding: 16px 50px;
+    font-size: 20px;
+    margin-top: 40px;
   }
 }
 </style>
 </head>
 
 <body>
-
 <div class="slide">
-
   <div class="text">
     <h1>&lt;Hello World&gt;</h1>
-
-    <p>
-    Today I will tell you about a traditional event from the United Kingdom called Beltane.
-    It is an ancient festival connected with nature, fire, and the changing of seasons.
-    </p>
-
-    <p>
-    This celebration has a long history and was important for Celtic people.
-    Today, it is still celebrated in different ways.
-    </p>
+    <p>Today I will tell you about a traditional event from the United Kingdom called Beltane. It is an ancient festival connected with nature, fire, and the changing of seasons.</p>
+    <p>This celebration has a long history and was important for Celtic people. Today, it is still celebrated in different ways.</p>
+    <p>In this presentation, you will learn about its history, what happens during Beltane, and how it is celebrated in modern times.</p>
   </div>
 
   <div class="images">
-    <img src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda" alt="Beltane fire">
-    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Nature festival">
+    <img src="https://www.beltane.org/wp-content/uploads/2019/04/BeltaneFireFestival1.jpg" alt="Beltane Fire 1">
+    <img src="https://www.bbc.com/news/av/pictures-c1eg571dqy2o" alt="Beltane Fire 2">
   </div>
 
+  <a href="slide1.html" class="start-btn">Start</a>
 </div>
-
-<!-- START BUTTON -->
-<a href="slide1.html" class="start-btn">start</a>
-
 </body>
 </html>
